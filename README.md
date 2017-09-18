@@ -1,5 +1,5 @@
 # v-hover
-[![NPM version][npm-image]][npm-url]
+[![npm version](https://badge.fury.io/js/v-hover.svg)](https://badge.fury.io/js/v-hover)
 >  Direction-aware hover effect for Vue2.0.
 
 ## Installation
@@ -44,6 +44,3 @@ you can custom `overlay` slot in `vhover-item` by:
 ## License
 
 MIT © masonz
-
-[npm-image]: https://badge.fury.io/js/v-hover
-[npm-url]: https://npmjs.org/package/v-hover
