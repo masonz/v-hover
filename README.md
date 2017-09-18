@@ -1,37 +1,49 @@
-## Welcome to GitHub Pages
+# v-hover
+[![NPM version][npm-image]][npm-url]
+>  Direction-aware hover effect for Vue2.0.
 
-You can use the [editor on GitHub](https://github.com/masonz/v-hover/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Installation
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+npm install v-hover -S
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## How to use
+Include plugin in your entry file e.g. `main.js`.
 
-### Jekyll Themes
+```JavaScript
+import VHover from 'v-hover'
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/masonz/v-hover/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Vue.use(VHover)
+```
 
-### Support or Contact
+in template:
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```HTML
+<vhover-list>
+  <vhover-item imageUrl="/assets/img/vue.png" link="http://www.vuejs.org"></vhover-item>
+  <vhover-item imageUrl="/assets/img/vue.png" link="http://www.vuejs.org"></vhover-item>
+  <vhover-item imageUrl="/assets/img/vue.png" link="http://www.vuejs.org"></vhover-item>
+</vhover-list>
+```
+you can custom `overlay` slot in `vhover-item` by:
+
+```HTML
+<vhover-item>
+  <div slot="overlay">some thing...</div>
+</vhover-item>
+```
+
+## Options
+| Name      | Type          | Default  | Description               |
+| ---       | ---           | ---      | ---                       |
+| duration  | String        | "300ms"  | animation-duration        |
+| className | String        | "vhover" | `vhover-item` class       |
+| timingFn  | String        | "ease"   | animation-timing-function |
+
+## License
+
+MIT © masonz
+
+[npm-image]: https://badge.fury.io/js/v-hover
+[npm-url]: https://npmjs.org/package/v-hover
