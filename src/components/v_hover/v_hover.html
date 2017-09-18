@@ -1,0 +1,8 @@
+<figure :class="[className, hoverClass]" :style="{ perspective }">
+  <a class="vhover__content" :href="link">
+    <img class="vhover__image" :src="imageUrl" :alt="imageUrl">
+    <div class="vhover__overlay" :style="{ animationDuration: duration, animationTimingFunction: timingFn }">
+      <slot name="overlay"></slot>
+    </div>
+  </a>
+</figure>

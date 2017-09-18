@@ -1,0 +1,55 @@
+{
+  "name": "v-hover",
+  "version": "0.1.0",
+  "description": "Direction-aware hover effect for Vue2.0.",
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3"
+  },
+  "main": "dist/vhover.min.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production npm run clean && npm run compile",
+    "clean": "rimraf dist && rimraf coverage",
+    "compile": "webpack --config config/webpack.config.prod.js",
+    "lint": "tslint src/**/*.ts -t verbose",
+    "lint-fix": "tslint --fix src/**/*.ts -t verbose",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masonz/v-hover.git"
+  },
+  "keywords": [
+    "vue2",
+    "hover"
+  ],
+  "author": "masonz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/masonz/v-hover/issues"
+  },
+  "homepage": "https://github.com/masonz/v-hover#readme",
+  "dependencies": {
+    "tslint-config-airbnb": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.28",
+    "autoprefixer": "^7.1.4",
+    "awesome-typescript-loader": "^3.2.3",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.5.2",
+    "vue": "^2.4.4",
+    "vue-class-component": "^5.0.2",
+    "vue-property-decorator": "^5.3.0",
+    "webpack": "^3.6.0"
+  }
+}
