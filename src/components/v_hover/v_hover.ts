@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import { Prop, Watch } from 'vue-property-decorator';
+import { HoverOption } from '../v_hover_list';
 import './v_hover.scss';
 
 @Component({
@@ -60,7 +61,11 @@ export class VHover extends Vue {
     this.hoverClass = state + class_suffix;
   }
 
-  setOption(option) {
+  /**
+   * Setting options.
+   * @param {HoverOption} option
+   */
+  setOption(option: HoverOption): void {
     this.duration = option.duration;
     this.timingFn = option.timingFn;
     this.perspective = option.perspective;

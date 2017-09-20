@@ -22,6 +22,11 @@ export class VHoverList extends Vue {
   @Prop({ default: 'vhover' }) className: string;
   options: HoverOption = new HoverOption();
 
+  /**
+   * Watch change of options.
+   * @param {HoverOption} val new options
+   * @param {HoverOption} oldVal old options
+   */
   @Watch('options', { immediate: true, deep: true })
   updateOptions(val: HoverOption, oldVal: HoverOption) {
     this.$nextTick(() => {
