@@ -11,6 +11,7 @@
     "build": "cross-env NODE_ENV=production npm run clean && npm run compile",
     "clean": "rimraf dist && rimraf coverage",
     "compile": "webpack --config config/webpack.config.prod.js",
+    "deploy": "gh-pages -d demo",
     "lint": "tslint src/**/*.ts -t verbose",
     "lint-fix": "tslint --fix src/**/*.ts -t verbose",
     "test": "echo \"Error: no test specified\" && exit 1"
